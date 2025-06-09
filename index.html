@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-Board</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body id="body" class="bg-gray-400 mx-2 sm:mx-4 md:mx-7">
+  <header>
+    <nav class="bg-white flex flex-col sm:flex-row justify-between items-center my-2 sm:my-4 rounded-xl px-3 sm:px-4 py-2 sm:py-3 shadow-sm gap-2 sm:gap-0">
+      <div class="flex items-center gap-2">
+        <img src="images/logo.png" alt="logo" class="h-6 sm:h-8 w-auto">
+        <h2 class="text-xl sm:text-2xl font-semibold">Dev Board</h2>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-5">
+        <button id="updateBtn" class="flex items-center rounded-sm px-2 sm:px-3 py-1 sm:py-2 gap-2 border border-gray-300 hover:bg-gray-50 hover:shadow-md
+                active:bg-gray-100 active:shadow-inner
+                transition-all duration-150 ease-in-out">
+          <img src="images/checkbox.png" alt="checkbox" class="h-3 sm:h-4 w-auto">
+          <p class="text-xs sm:text-sm font-medium">10</p>
+        </button>
+        <button id="theme-btn" class="p-1 rounded-full hover:bg-gray-100">
+          <img src="images/theme-btn.png" alt="Toggle theme" class="h-6 sm:h-8 w-auto">
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="flex flex-col lg:flex-row gap-4 justify-between">
+    <main class="w-full lg:w-[80%] bg-white rounded-xl shadow-sm">
+      <div class="px-3 sm:px-4 py-2 sm:py-3 h-auto sm:h-40 flex justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 my-3 sm:my-5 w-full">
+          <!-- Task Assigned Button -->
+          <button class="flex items-center justify-center gap-2 px-3 sm:px-4 py-3 sm:py-5 bg-gray-200 rounded-lg shadow-sm border border-gray-300
+                hover:shadow-md
+                active:bg-gray-100 active:shadow-inner
+                transition-all duration-150 ease-in-out">
+            <img src="images/checkbox.png" alt="checkbox" class="w-4 sm:w-5 h-4 sm:h-5">
+            <span class="text-xs sm:text-sm font-medium text-gray-700">Task Assigned 06</span>
+          </button>
+
+          <!-- Discover Button -->
+          <button id="Discover" class="flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 rounded-lg 
+              bg-gradient-to-r from-blue-500 to-blue-600 
+              hover:from-blue-600 hover:to-blue-700 
+              active:from-blue-700 active:to-blue-800 
+              transition-all duration-200 ease-in-out">
+            <img src="images/board.png" alt="board" class="w-4 sm:w-5 h-4 sm:h-5 filter brightness-0 invert">
+            <span class="text-xs sm:text-sm font-medium text-white text-center">Discover Something New Today</span>
+          </button>
+
+          <!-- Date -->
+          <div class="flex items-center justify-center gap-2 px-3 sm:px-4 py-3 sm:py-5 bg-gray-200 rounded-lg border border-gray-300">
+            <img src="images/calender.png" alt="calendar" class="w-4 sm:w-5 h-4 sm:h-5">
+            <span id="dateToday" class="text-xs sm:text-sm font-medium text-gray-700">8-6-2025</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-t border-gray-200">
+
+      <!-- Card Container -->
+      <div class="px-3 sm:px-4 py-2 sm:py-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
+          
+          <!-- Card 1 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                ShopEase
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Fix Mobile Button Issue</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- Repeat for other cards (Card 2 to Card 6) with same responsive classes -->
+          <!-- Card 2 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                CloudSync
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Add dark mode</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                swiftPay
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Optimize home page</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                Meta
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Add new emoji</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                Goggle LLC
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Fix integrate openAi API</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="flex flex-col p-2 sm:p-3 bg-gray-200 border border-gray-300 rounded-lg h-full">
+            <div class="flex-grow">
+              <button class="px-2 sm:px-3 py-1 bg-white border border-gray-300 rounded-md text-xs sm:text-sm">
+                Glassdoor
+              </button>
+              <h3 class="mt-1 sm:mt-2 text-base sm:text-lg font-medium">Improve job searching</h3>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                A card component has a figure, a body part and inside body there are title and action part
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center mt-2 sm:mt-4">
+              <div>
+                <h4 class="text-2xs sm:text-xs text-gray-500">Deadline</h4>
+                <p class="text-xs sm:text-sm font-medium">21 March 2025</p>
+              </div>
+              <button class="complete-btn px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-white
+                        bg-gradient-to-r from-blue-500 to-blue-600 
+                        hover:from-blue-600 hover:to-blue-700 
+                        active:from-blue-700 active:to-blue-800 
+                        transition-all duration-200 ease-in-out">
+                Complete
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <aside id="aside" class="w-full lg:w-[20%] bg-white rounded-xl shadow-sm mt-4 lg:mt-0">
+      <div class="flex justify-center items-center px-3 sm:px-4 py-2 sm:py-3 h-auto sm:h-40">
+        <div class="px-3 sm:px-4 py-3 sm:py-5 space-y-3 sm:space-y-5 pb-0">
+          <div class="flex items-center gap-2">
+            <img src="images/activity.png" alt="activity" class="h-5 sm:h-6 w-auto">
+            <p class="text-sm sm:text-base">Activity Log</p>
+          </div>
+
+          <!-- Clear History Button -->
+          <button id="clearBtn" class="flex items-center justify-center gap-2 px-3 sm:px-4 py-2 sm:py-4 w-full rounded-lg border border-gray-200 shadow-sm
+                hover:bg-gray-50 hover:shadow-md
+                active:bg-gray-100 active:shadow-inner
+                bg-gradient-to-r from-blue-500 to-blue-600 
+                hover:from-blue-600 hover:to-blue-700 
+                active:from-blue-700 active:to-blue-800 
+                transition-all duration-200 ease-in-out">
+            <span class="text-xs sm:text-sm text-white font-medium">Clear History</span>
+          </button>
+        </div>
+      </div>
+
+      <hr class="border-t border-gray-200">
+    </aside>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="pageChange.js"></script>
+
+</body>
+
+</html>

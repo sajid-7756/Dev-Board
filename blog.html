@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-400 mx-7">
+    <header>
+        <nav class="bg-white flex justify-between items-center  my-4 rounded-xl px-4 py-3 shadow-sm">
+            <div class="flex items-center gap-2">
+                <img src="images/logo.png" alt="logo" class="h-8 w-auto">
+                <h2 class="text-2xl font-semibold">Dev Board</h2>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <button id="back-to-desk" class="flex items-center rounded-sm px-3 py-2 gap-2 border-1 border-gray-300 hover:bg-gray-50 hover:shadow-md
+        active:bg-gray-100 active:shadow-inner
+        transition-all duration-150 ease-in-out">
+                    Back to desk
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="flex flex-col justify-center items-center">
+            <h2 class="text-4xl my-5 font-serif font-semibold">Blogs</h2>
+
+            <div class="space-y-5 mb-7">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-xl">
+                    <p class="p-5"><span class="text-red-600 font-semibold text-lg">Question no 1: </span> What are the
+                        different ways to select an element in the DOM?</p>
+                    <hr>
+                    <p class="p-5"><span class="text-blue-500 font-semibold text-lg">Answer : </span>getElementById(),
+                        getElementsByClassName(), getElementsByTagName(), querySelector(),
+                        querySelectorAll(), getElementsByName().
+                    </p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-white rounded-xl">
+                    <p class="p-5"><span class="text-red-600 font-semibold text-lg">Question no 2: </span>What is the
+                        difference between innerHTML, innerText, and textContent ?</p>
+                    <hr>
+                    <p class="p-5"><span class="text-blue-500 font-semibold text-lg">Answer : </span>InnerHtml:
+                        Retrieves or sets the HTML content inside an
+                        innerText:Retrieves or sets the visible text inside an element.
+                        innerContent:Retrieves or sets all text content, including hidden elements.
+                    </p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white rounded-xl">
+                    <p class="p-5"><span class="text-red-600 font-semibold text-lg">Question no 3: </span> What is event
+                        delegation in the DOM?</p>
+                    <hr>
+                    <p class="p-5"><span class="text-blue-500 font-semibold text-lg">Answer : </span>Event Delegation is
+                        a technique in JavaScript where we can call multiple child in one add event listener and it is
+                        perfect for call multiple elements
+                    </p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-white rounded-xl">
+                    <p class="p-5"><span class="text-red-600 font-semibold text-lg">Question no 4: </span>What is event
+                        bubbling in the DOM?</p>
+                    <hr>
+                    <p class="p-5"><span class="text-blue-500 font-semibold text-lg">Answer : </span>Event Bubbling is a
+                        concept in JavaScript where an event starts from the target element and it can reach up to
+                        document until stop. when user interact child element it triggers on first child element and
+                        move forward to its parents. bubble up stop by event.stopPropagation();
+                    </p>
+                </div>
+
+                <!-- Question 1 -->
+                <div class="bg-white rounded-xl">
+                    <p class="p-5"><span class="text-red-600 font-semibold text-lg">Question no 1: </span>How do you
+                        create ,add and remove element in javaScript ?</p>
+                    <hr>
+                    <p class="p-5"><span class="text-blue-500 font-semibold text-lg">Answer : </span>
+                        document.createElement(),
+                        appendChild(),
+                        append(),
+                        prepend(),
+                        removeChild(),
+                        replaceChild(),
+                        element.innerHTML,
+                        element.setAttribute("id", "myId"),
+                        element.innerText.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="pageChange.js"></script>
+
+</body>
+
+</html>
